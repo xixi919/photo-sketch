@@ -42,51 +42,50 @@
 <h3>
 <a id="usage-example" class="anchor" href="#usage-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage Example</h3>
 
-<pre><code>&lt;html&gt;
-    &lt;head&gt;
-    &lt;style&gt;
-    .colour {
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
-        border: 1px solid;
-        float: left;
-    }
-    &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
-        &lt;script src="photo-sketch.js"&gt;&lt;/script&gt;
-        &lt;script type="text/javascript"&gt;
-            var myCanvas = false;
-            $(function() {
-                myCanvas = new Canvas('my-canvas');
-                myCanvas.setImgInput('file');
-            });
-        &lt;/script&gt;
-        &lt;canvas id="my-canvas" width="400" height="400" &gt;&lt;/canvas&gt;
-        &lt;span class="btn-file"&gt;
-            Browse File &lt;input type="file" id="file" /&gt;
-        &lt;/span&gt;
-        &lt;!-- change colours --&gt;
-        &lt;div class="colour" id="green" onclick="myCanvas.changeColour('green')"&gt;&lt;/div&gt;
-        &lt;div class="colour" id="red" onclick="myCanvas.changeColour('#FF0000')"&gt;&lt;/div&gt;
-        &lt;div class="colour" id="yellow" onclick="myCanvas.changeColour('yellow')"&gt;&lt;/div&gt;
-        &lt;div class="colour" id="white" onclick="myCanvas.changeColour('white')"&gt;&lt;/div&gt;
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">html</span>&gt;
+    &lt;<span class="pl-ent">head</span>&gt;
+<span class="pl-s1">    &lt;<span class="pl-ent">style</span>&gt;</span>
+<span class="pl-s1">    <span class="pl-e">.colour</span> {</span>
+<span class="pl-s1">        <span class="pl-c1"><span class="pl-c1">width</span></span>: <span class="pl-c1">20<span class="pl-k">px</span></span>;</span>
+<span class="pl-s1">        <span class="pl-c1"><span class="pl-c1">height</span></span>: <span class="pl-c1">20<span class="pl-k">px</span></span>;</span>
+<span class="pl-s1">        <span class="pl-c1"><span class="pl-c1">border-radius</span></span>: <span class="pl-c1">10<span class="pl-k">px</span></span>;</span>
+<span class="pl-s1">        <span class="pl-c1"><span class="pl-c1">border</span></span>: <span class="pl-c1">1<span class="pl-k">px</span></span> <span class="pl-c1">solid</span>;</span>
+<span class="pl-s1">        <span class="pl-c1"><span class="pl-c1">float</span></span>: <span class="pl-c1">left</span>;</span>
+<span class="pl-s1">    }</span>
+<span class="pl-s1">    &lt;/<span class="pl-ent">style</span>&gt;</span>
+    &lt;/<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">body</span>&gt;
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>photo-sketch.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s1">            <span class="pl-k">var</span> myCanvas <span class="pl-k">=</span> <span class="pl-c1">false</span>;</span>
+<span class="pl-s1">            $(<span class="pl-k">function</span>() {</span>
+<span class="pl-s1">                myCanvas <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Canvas</span>(<span class="pl-s"><span class="pl-pds">'</span>my-canvas<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">                <span class="pl-smi">myCanvas</span>.<span class="pl-en">setImgInput</span>(<span class="pl-s"><span class="pl-pds">'</span>file<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">            });</span>
+<span class="pl-s1">        &lt;/<span class="pl-ent">script</span>&gt;</span>
+        &lt;<span class="pl-ent">canvas</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>my-canvas<span class="pl-pds">"</span></span> <span class="pl-e">width</span>=<span class="pl-s"><span class="pl-pds">"</span>400<span class="pl-pds">"</span></span> <span class="pl-e">height</span>=<span class="pl-s"><span class="pl-pds">"</span>400<span class="pl-pds">"</span></span> &gt;&lt;/<span class="pl-ent">canvas</span>&gt;
+        &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>btn-file<span class="pl-pds">"</span></span>&gt;
+            Browse File &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>file<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>file<span class="pl-pds">"</span></span> /&gt;
+        &lt;/<span class="pl-ent">span</span>&gt;
+        <span class="pl-c">&lt;!-- change colours --&gt;</span>
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>colour<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>green<span class="pl-pds">"</span></span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">"</span>myCanvas.changeColour('green')<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>colour<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>red<span class="pl-pds">"</span></span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">"</span>myCanvas.changeColour('#FF0000')<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>colour<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>yellow<span class="pl-pds">"</span></span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">"</span>myCanvas.changeColour('yellow')<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>colour<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>white<span class="pl-pds">"</span></span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">"</span>myCanvas.changeColour('white')<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
 
 
-        &lt;!-- change size --&gt;
-        &lt;button onclick="myCanvas.changeSize(1)"&gt;Thin&lt;/button&gt;
-        &lt;button onclick="myCanvas.changeSize(5)"&gt;Medium&lt;/button&gt;
-        &lt;button onclick="myCanvas.changeSize(10)"&gt;Thick&lt;/button&gt;
+        <span class="pl-c">&lt;!-- change size --&gt;</span>
+        &lt;<span class="pl-ent">button</span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">"</span>myCanvas.changeSize(1)<span class="pl-pds">"</span></span>&gt;Thin&lt;/<span class="pl-ent">button</span>&gt;
+        &lt;<span class="pl-ent">button</span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">"</span>myCanvas.changeSize(5)<span class="pl-pds">"</span></span>&gt;Medium&lt;/<span class="pl-ent">button</span>&gt;
+        &lt;<span class="pl-ent">button</span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">"</span>myCanvas.changeSize(10)<span class="pl-pds">"</span></span>&gt;Thick&lt;/<span class="pl-ent">button</span>&gt;
 
-        &lt;!-- other functions --&gt;
-        &lt;input type="button" value="Clear" onclick="myCanvas.discard()" /&gt;
-        &lt;input type="button" value="Rotate" onclick="myCanvas.rotateClockwise()" /&gt;
-        &lt;input type="button" value="Data URL" onclick="alert(myCanvas.getDataURL());" /&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+        <span class="pl-c">&lt;!-- other functions --&gt;</span>
+        &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>Clear<span class="pl-pds">"</span></span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">"</span>myCanvas.discard()<span class="pl-pds">"</span></span> /&gt;
+        &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>Rotate<span class="pl-pds">"</span></span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">"</span>myCanvas.rotateClockwise()<span class="pl-pds">"</span></span> /&gt;
+        &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>Data URL<span class="pl-pds">"</span></span> <span class="pl-e">onclick</span>=<span class="pl-s"><span class="pl-pds">"</span>alert(myCanvas.getDataURL());<span class="pl-pds">"</span></span> /&gt;
+    &lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>

@@ -60,3 +60,7 @@ This library required jQuery to function
     </body>
 </html>
 ```
+The html codes are not styled and just for demostrating usage purpose. 
+Below is a screenshot of a styled version using this library:
+
+![Example Screenshot](https://github.com/xixi919/photo-sketch/blob/master/example.png?raw=true)

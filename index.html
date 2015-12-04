@@ -43,6 +43,48 @@
 <a id="usage-example" class="anchor" href="#usage-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage Example</h3>
 
 <pre><code>&lt;html&gt;
+    &lt;head&gt;
+    &lt;style&gt;
+    .colour {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        border: 1px solid;
+        float: left;
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script src="photo-sketch.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript"&gt;
+            var myCanvas = false;
+            $(function() {
+                myCanvas = new Canvas('my-canvas');
+                myCanvas.setImgInput('file');
+            });
+        &lt;/script&gt;
+        &lt;canvas id="my-canvas" width="400" height="400" &gt;&lt;/canvas&gt;
+        &lt;span class="btn-file"&gt;
+            Browse File &lt;input type="file" id="file" /&gt;
+        &lt;/span&gt;
+        &lt;!-- change colours --&gt;
+        &lt;div class="colour" id="green" onclick="myCanvas.changeColour('green')"&gt;&lt;/div&gt;
+        &lt;div class="colour" id="red" onclick="myCanvas.changeColour('#FF0000')"&gt;&lt;/div&gt;
+        &lt;div class="colour" id="yellow" onclick="myCanvas.changeColour('yellow')"&gt;&lt;/div&gt;
+        &lt;div class="colour" id="white" onclick="myCanvas.changeColour('white')"&gt;&lt;/div&gt;
+
+
+        &lt;!-- change size --&gt;
+        &lt;button onclick="myCanvas.changeSize(1)"&gt;Thin&lt;/button&gt;
+        &lt;button onclick="myCanvas.changeSize(5)"&gt;Medium&lt;/button&gt;
+        &lt;button onclick="myCanvas.changeSize(10)"&gt;Thick&lt;/button&gt;
+
+        &lt;!-- other functions --&gt;
+        &lt;input type="button" value="Clear" onclick="myCanvas.discard()" /&gt;
+        &lt;input type="button" value="Rotate" onclick="myCanvas.rotateClockwise()" /&gt;
+        &lt;input type="button" value="Data URL" onclick="alert(myCanvas.getDataURL());" /&gt;
+    &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
 

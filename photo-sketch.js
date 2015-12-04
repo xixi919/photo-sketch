@@ -107,8 +107,8 @@ var Canvas = function(canvasId) {
 	}
 
 	this.setImgInput = function(inputId) {
-		var input = document.getElementById('input');
-        input.addEventListener('change', this.drawImage, false);
+		var input = document.getElementById(inputId);
+        	input.addEventListener('change', this.drawImage, false);
 	}
 
 	this.drawImage = function(e) {
